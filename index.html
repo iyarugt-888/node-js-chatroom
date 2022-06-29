@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <title>Node.Js Chatroom</title>
+        <link id="theme" rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="login">
+            <div id="wrap" class="input">
+                <header class="input-header">
+                  <h1>Join Channel</h1>
+                </header>
+                <section class="input-content">
+                  <div class="input-content-wrap">
+                    <dl class="inputbox">
+                      <dt class="inputbox-title">Nickname</dt>
+                      <dd class="inputbox-content">
+                        <input id="input0" type="text" required />
+                        <label for="input0">Nickname</label>
+                        <span class="underline"></span>
+                      </dd>
+                    </dl>
+                    <dl class="inputbox">
+                      <dt class="inputbox-title">Channel ID</dt>
+                      <dd class="inputbox-content">
+                        <input id="input1" type="text" required />
+                        <label for="input1">ID</label>
+                        <span class="underline"></span>
+                      </dd>
+                      <span class="error" id="error"></span>
+                    </dl>
+                    <div class="btns">
+                      <button class="btn btn-confirm" onclick="joinChannel()">Join Channel</button>
+                      <button class="btn btn-cancel" onclick="createChannel()">Create Channel</button>
+                    </div>
+                  </div>
+                </section>
+              </div>
+        </div>
+        <div class="container">
+            <div class="top">
+                <div class="center">
+                    <div class="topbarcontainer">
+                        <span id="channelname"></span>
+                        <span id="info"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="messages"></div>
+            <div id="textbox">
+                <div class="center" style="border-radius: 25px;">
+                    <textarea id="textinput"></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
